@@ -38,7 +38,7 @@ app.post("/", function (req, res) {
     console.log(process.env.MAILCHIMP_API_KEY);
     const options = {
         method: "POST",
-        auth: "shruti1:"+process.env.MAILCHIMP_API_KEY
+        auth: "shruti1:"+keys/process.env.MAILCHIMP_API_KEY
     }
    
 
