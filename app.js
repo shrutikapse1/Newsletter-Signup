@@ -33,12 +33,14 @@ app.post("/", function (req, res) {
             ]
     };
     const jsonData = JSON.stringify(data);
+    require("dotenv").config();
     const url = "https://us21.api.mailchimp.com/3.0/lists/aa2fe8676e"
+    console.log(process.env.MAILCHIMP_API_KEY);
     const options = {
         method: "POST",
-        auth: ""
-        
+        auth: "shruti1:"+process.env.MAILCHIMP_API_KEY
     }
+   
 
     const request = https.request(url, options, function (response) {
     console.log(response.statusCode);
